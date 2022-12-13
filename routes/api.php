@@ -128,6 +128,6 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
 Route::any('/{any}', function () {
     return response()->json([
         'error' => true,
-        'message' => 'Lien invalide !',
+        'message' => 'Lien invalide !!',
     ], 404);
 })->where('any', '.*');
