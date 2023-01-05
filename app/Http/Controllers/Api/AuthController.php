@@ -153,7 +153,6 @@ class AuthController extends Controller
                 'company_email' => 'required|unique:companies,email',
                 'company_name' => 'required',
                 'company_phone_number' => 'required',
-                'company_rib' => 'required',
                 'company_siret' => 'required',
             ]);
 
