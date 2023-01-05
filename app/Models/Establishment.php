@@ -15,7 +15,7 @@ class Establishment extends Model
         'city',
         'longitude',
         'latitude',
-        'img',
+        'image_path',
     ];
 
     protected $appends = [
@@ -25,9 +25,9 @@ class Establishment extends Model
     public function getImageUrlAttribute()
     {
         try {
-            if ($this->img != null) {
+            if ($this->image_path != null) {
                 $link = Storage::cloud()->temporaryUrl(
-                    'professionals/' . $this->owner()->id . '/' . $this->img,
+                    'professionals/' . $this->owner()->id . '/' . $this->image_path,
                     now()->addMinutes(30),
                 );
                 return $link;
